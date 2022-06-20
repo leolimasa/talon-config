@@ -27,9 +27,6 @@ funk: insert("func")
   key(escape)
   key(V)
   
-te mocks sessions:
-  key(ctrl-b)
-  key(s)
   
 (van | him | them) delete previous word: 
   key(escape)
@@ -57,10 +54,10 @@ te mocks sessions:
   key(escape) 
   insert("GG")
 
-window left:
+(when the | window) left:
   key(ctrl-h)
 
-window right:
+(when do | window) right:
   key(ctrl-l)
 
 window down:
@@ -69,13 +66,71 @@ window down:
 window up:
   key(ctrl-k)
 
+ask:
+  key(escape)
+  sleep(50ms)
+
+########################
+# Tmux                 #
+########################
   
+te mocks sessions:
+  key(ctrl-b)
+  key(s)
+  
+te mocks new session:
+  key(ctrl-b)
+  insert(":new-session -s ")
+
+te mocks rename session:
+  key(ctrl-b)
+  key($)
+
 window new:
   key(ctrl-b)
   insert(":")
   
+  
+########################
+# Brave                #
+########################
+
 (grave | brave) tap next:
   key(ctrl-tab)
 
 (shall |shell) (git | p | i):
   insert("git")
+  
+
+(grave | brave) tap previous:
+  key(ctrl-shift-tab)
+ 
+
+(grave | brave) tap (you |in |new):
+  key(ctrl-t)
+  
+
+(grave | brave) tap clothes:
+  key(ctrl-w)
+  
+
+(grave | brave) go back:
+  key(alt-left)
+  
+
+########################
+# Shell                #
+########################
+
+(shall |shell) (git | p | i):
+  insert("git")
+
+
+########################
+# General              #
+########################
+
+al tab:
+  key(alt-tab)
+
+
