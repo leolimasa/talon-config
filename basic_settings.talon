@@ -86,10 +86,17 @@ te mocks rename session:
   key(ctrl-b)
   key($)
 
-window new:
+te max new pane:
   key(ctrl-b)
-  insert(":")
+  insert("%")
   
+ti mats new window:
+  key(ctrl-b)
+  insert(":new-window -n ")
+  
+te max rename window:
+  key(ctrl-b)
+  insert(",")
   
 ########################
 # Brave                #
@@ -130,7 +137,5 @@ window new:
 # General              #
 ########################
 
-al tab:
+switch window:
   key(alt-tab)
-
-
